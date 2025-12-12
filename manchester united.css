@@ -151,8 +151,6 @@ section {
     color: var(--red);
 }
 
-
-
 .Trophys {
     background: #f7f7f7;
 }
@@ -264,6 +262,7 @@ footer a {
         gap: 0.6em;
     }
 }
+
 @keyframes popUp {
     from {
         opacity: 0;
@@ -280,6 +279,7 @@ section {
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
+
 .trophies-list {
     display: flex;
     gap: 2em;
@@ -299,6 +299,7 @@ section {
     animation: slideTrophies 20s linear infinite;
 }
 
+
 @keyframes slideTrophies {
     from {
         transform: translateX(0);
@@ -307,9 +308,12 @@ section {
         transform: translateX(-100%);
     }
 }
+
+
 .trophies-list:hover .trophy-item {
     animation-play-state: paused;
-            }
+}
+
 .testimonials .content {
     overflow-x: hidden;
 }
@@ -323,6 +327,7 @@ section {
     flex-wrap: nowrap;
     scroll-behavior: smooth;
 }
+
 
 .testimonials ul::-webkit-scrollbar {
     display: none;
@@ -342,10 +347,12 @@ section {
     transform: scale(1.05);
 }
 
+
 .history .content {
     max-width: 900px;
     margin: 0 auto;
-    }
+}
+
 .history h1 {
     font-family: "Playfair Display", serif;
     font-size: 3em;
@@ -354,14 +361,18 @@ section {
     margin-top: 0.4em;
     margin-bottom: 0.6em;
     text-align: center;
-            }
+}
+
+
 .history p {
     font-size: 1.05em;
     line-height: 1.8;
     color: #333;
     margin-bottom: 1.4em;
     text-align: justify;
-    }
+}
+
+
 .history h2 {
     font-family: "Playfair Display", serif;
     font-size: 2em;
@@ -370,11 +381,11 @@ section {
     color: #8b0000;
     border-left: 4px solid #c70101;
     padding-left: 0.6em;
-    }
-.history .history-list {
-    margin-top: 2em;
 }
 
 
+.history .history-list {
+    margin-top: 2em;
+}
 
 
