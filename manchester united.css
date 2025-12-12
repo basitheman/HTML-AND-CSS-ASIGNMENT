@@ -342,5 +342,37 @@ section {
     transform: scale(1.05);
 }
 
+.history .content {
+    max-width: 900px;
+    margin: 0 auto;
+    }
+.history h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3em;
+    font-weight: 700;
+    color: #c70101;
+    margin-bottom: 0.6em;
+    text-align: center;
+            }
+.history p {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.4em;
+    text-align: justify;
+    }
+.history h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2em;
+    margin-top: 2.5em;   
+    margin-bottom: 1.2em;
+    color: #8b0000;
+    border-left: 4px solid #c70101;
+    padding-left: 0.6em;
+    }
+.history .history-list {
+    margin-top: 2em;
+}
+
 
 
