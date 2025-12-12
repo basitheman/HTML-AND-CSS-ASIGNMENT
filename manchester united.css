@@ -351,6 +351,7 @@ section {
     font-size: 3em;
     font-weight: 700;
     color: #c70101;
+    margin-top: 0.4em;
     margin-bottom: 0.6em;
     text-align: center;
             }
@@ -373,6 +374,7 @@ section {
 .history .history-list {
     margin-top: 2em;
 }
+
 
 
 
