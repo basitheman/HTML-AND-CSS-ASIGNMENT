@@ -298,3 +298,49 @@ section {
     flex: 0 0 auto;
     animation: slideTrophies 20s linear infinite;
 }
+
+@keyframes slideTrophies {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.trophies-list:hover .trophy-item {
+    animation-play-state: paused;
+            }
+.testimonials .content {
+    overflow-x: hidden;
+}
+
+.testimonials ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    overflow-x: auto;
+    padding: 2em 1em;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+}
+
+.testimonials ul::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial-item {
+    min-width: 300px;
+    flex: 0 0 auto;
+    background: #1a1a1a;
+    padding: 1.5em;
+    border-radius: 18px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: scale(1.05);
+}
+
+
+
