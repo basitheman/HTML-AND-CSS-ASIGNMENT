@@ -231,9 +231,7 @@ logoutBtn.onclick = () => {
     location.reload();
 };
 
-// ============================
-// DARK MODE + MODAL STYLES (FIXED)
-// ============================
+
 const style = document.createElement("style");
 style.innerHTML = `
 body.dark-mode {
@@ -301,6 +299,6 @@ body.dark-mode .modal-box {
 `;
 document.head.appendChild(style);
 
-// ============================
 updateUI();
+
 
