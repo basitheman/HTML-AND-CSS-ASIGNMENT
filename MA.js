@@ -1,6 +1,4 @@
-// ============================
-// UTILITIES
-// ============================
+
 async function hashPassword(password) {
     const encoder = new TextEncoder();
     const data = encoder.encode(password);
@@ -15,9 +13,7 @@ const saveUsers = users => localStorage.setItem("users", JSON.stringify(users));
 const getCurrentUser = () => JSON.parse(localStorage.getItem("currentUser"));
 const setCurrentUser = user => localStorage.setItem("currentUser", JSON.stringify(user));
 
-// ============================
-// INITIAL ADMIN
-// ============================
+
 (async () => {
     let users = getUsers();
     if (!users.some(u => u.role === "admin")) {
@@ -31,9 +27,6 @@ const setCurrentUser = user => localStorage.setItem("currentUser", JSON.stringif
     }
 })();
 
-// ============================
-// THEME TOGGLE (FIXED)
-// ============================
 const themeBtn = document.getElementById("themeToggle");
 
 if (localStorage.getItem("theme") === "dark") {
@@ -48,9 +41,7 @@ themeBtn.onclick = () => {
     localStorage.setItem("theme", isDark ? "dark" : "light");
 };
 
-// ============================
-// MODALS HTML
-// ============================
+
 document.body.insertAdjacentHTML("beforeend", `
 <div class="modal" id="loginModal">
  <div class="modal-box">
@@ -106,9 +97,7 @@ document.body.insertAdjacentHTML("beforeend", `
 </div>
 `);
 
-// ============================
-// MODAL CONTROLS
-// ============================
+
 const loginBtn = document.getElementById("loginBtn");
 
 loginBtn.onclick = () => loginModal.style.display = "flex";
@@ -127,9 +116,7 @@ forgotPass.onclick = () => {
     resetModal.style.display = "flex";
 };
 
-// ============================
-// REGISTER
-// ============================
+
 registerSubmit.onclick = async () => {
     let users = getUsers();
     if (users.some(u => u.email === regEmail.value))
@@ -147,9 +134,7 @@ registerSubmit.onclick = async () => {
     registerModal.style.display = "none";
 };
 
-// ============================
-// LOGIN
-// ============================
+
 loginSubmit.onclick = async () => {
     const users = getUsers();
     const pass = await hashPassword(loginPassword.value);
@@ -165,9 +150,7 @@ loginSubmit.onclick = async () => {
     updateUI();
 };
 
-// ============================
-// RESET PASSWORD
-// ============================
+
 resetSubmit.onclick = async () => {
     let users = getUsers();
     const user = users.find(u => u.email === resetEmail.value);
@@ -180,9 +163,7 @@ resetSubmit.onclick = async () => {
     resetModal.style.display = "none";
 };
 
-// ============================
-// PROFILE
-// ============================
+
 function updateUI() {
     const user = getCurrentUser();
     if (!user) return;
@@ -204,9 +185,6 @@ function openProfile(user) {
     }
 }
 
-// ============================
-// EDIT PROFILE
-// ============================
 saveProfile.onclick = async () => {
     let users = getUsers();
     let user = getCurrentUser();
@@ -223,9 +201,7 @@ saveProfile.onclick = async () => {
     location.reload();
 };
 
-// ============================
-// ADMIN PANEL
-// ============================
+
 function openAdminPanel() {
     adminModal.style.display = "flex";
     userList.innerHTML = "";
@@ -249,9 +225,7 @@ function openAdminPanel() {
     });
 }
 
-// ============================
-// LOGOUT
-// ============================
+
 logoutBtn.onclick = () => {
     localStorage.removeItem("currentUser");
     location.reload();
@@ -329,3 +303,4 @@ document.head.appendChild(style);
 
 // ============================
 updateUI();
+
