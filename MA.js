@@ -27,6 +27,7 @@ const setCurrentUser = user => localStorage.setItem("currentUser", JSON.stringif
     }
 })();
 
+
 const themeBtn = document.getElementById("themeToggle");
 
 if (localStorage.getItem("theme") === "dark") {
@@ -185,6 +186,7 @@ function openProfile(user) {
     }
 }
 
+
 saveProfile.onclick = async () => {
     let users = getUsers();
     let user = getCurrentUser();
@@ -299,6 +301,5 @@ body.dark-mode .modal-box {
 `;
 document.head.appendChild(style);
 
+
 updateUI();
-
-
